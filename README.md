@@ -1,21 +1,18 @@
-# AutoSizeText
+# AutoSizeText Plus*
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/leisim/auto_size_text/CI) [![codecov](https://codecov.io/gh/leisim/auto_size_text/branch/master/graph/badge.svg)](https://codecov.io/gh/leisim/auto_size_text) [![Version](https://img.shields.io/pub/v/auto_size_text.svg)](https://pub.dev/packages/auto_size_text) ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Oyonde/auto_size_text/CI) [![codecov](https://codecov.io/gh/Oyonde/auto_size_text/branch/master/graph/badge.svg)](https://codecov.io/gh/Oyonde/auto_size_text) [![Version](https://img.shields.io/pub/v/auto_size_text.svg)](https://pub.dev/packages/auto_size_text) ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)
 
 Flutter widget that automatically resizes text to fit perfectly within its bounds.
 
 **Show some ❤️ and star the repo to support the project**
 
 ### Resources:
-- [Documentation](https://pub.dev/documentation/auto_size_text/latest/auto_size_text/AutoSizeText-class.html)
-- [Pub Package](https://pub.dev/packages/auto_size_text)
-- [GitHub Repository](https://github.com/leisim/auto_size_text)
-- [Online Demo](https://appetize.io/app/w352kxbnz51c6pfvxrdvxcb3xw?device=nexus5&scale=100&orientation=landscape&osVersion=8.1&deviceColor=black)
-
-Also check out the blazing fast key-value store [hive](https://github.com/leisim/hive).
+- [Documentation](https://pub.dev/documentation/auto_size_text_plus/latest/auto_size_text_plus/AutoSizeText-class.html)
+- [Pub Package](https://pub.dev/packages/auto_size_text_plus)
+- [GitHub Repository](https://github.com/Oyonde/auto_size_text)
 
 
-![](https://raw.githubusercontent.com/leisim/auto_size_text/master/.github/art/maxlines.gif)
+![](illustration/maxlines.gif)
 
 ## Contents
 
@@ -80,7 +77,7 @@ AutoSizeText(
 )
 ```
 
-![](https://raw.githubusercontent.com/leisim/auto_size_text/master/.github/art/minfontsize.gif)
+![](illustration/minfontsize.gif)
 
 
 ### group
@@ -107,7 +104,7 @@ AutoSizeText(
 );
 ```
 
-![](https://raw.githubusercontent.com/leisim/auto_size_text/master/.github/art/group.gif)
+![](illustration/group.gif)
 
 
 ### stepGranularity
@@ -126,7 +123,7 @@ AutoSizeText(
 )
 ```
 
-![](https://raw.githubusercontent.com/leisim/auto_size_text/master/.github/art/stepgranularity.gif)
+![](illustration/stepgranularity.gif)
 
 
 ### presetFontSizes
@@ -142,7 +139,7 @@ AutoSizeText(
 )
 ```
 
-![](https://raw.githubusercontent.com/leisim/auto_size_text/master/.github/art/presetfontsizes.gif)
+![](illustration/presetfontsizes.gif)
 
 
 ### overflowReplacement
@@ -157,7 +154,7 @@ AutoSizeText(
 )
 ```
 
-![](https://raw.githubusercontent.com/leisim/auto_size_text/master/.github/art/overflowreplacement.gif)
+![](illustration/overflowreplacement.gif)
 
 
 ## Rich Text
@@ -179,7 +176,7 @@ AutoSizeText.rich(
 The text will be at least 1/4 of its original size (5 / 20 = 1/4).  
 But it does not mean that all `TextSpan`s have at least font size `5`.
 
-![](https://raw.githubusercontent.com/leisim/auto_size_text/master/.github/art/maxlines_rich.gif)
+![](illustration/maxlines_rich.gif)
 
 
 ## Parameters
@@ -251,7 +248,7 @@ Row(
 }
 ```
 
-Further explanation can be found [here](https://stackoverflow.com/a/53908204). If you still have problems, please [open an issue](https://github.com/leisim/auto_size_text/issues/new).
+Further explanation can be found [here](https://stackoverflow.com/a/53908204). If you still have problems, please [open an issue](issues/new).
 
 
 ### MinFontSize too large
@@ -285,7 +282,7 @@ AutoSizeText.rich(
 
 ## MIT License
 ```
-Copyright (c) 2018 Simon Leier
+Copyright (c) 2023 Jack Siro
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the 'Software'), to deal

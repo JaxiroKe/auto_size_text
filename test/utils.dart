@@ -1,12 +1,12 @@
 import 'dart:io';
-import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-double effectiveFontSize(Text text) =>
-    (text.textScaleFactor ?? 1) * text.style!.fontSize!;
+double effectiveFontSize(Text text) => (text.textScaleFactor ?? 1) * text.style!.fontSize!;
+
+double selectableEffectiveFontSize(SelectableText text) => (text.textScaleFactor ?? 1) * text.style!.fontSize!;
 
 bool doesTextFit(
   Text text, [
@@ -33,9 +33,7 @@ bool doesTextFit(
 
   textPainter.layout(maxWidth: maxWidth);
 
-  return !(textPainter.didExceedMaxLines ||
-      textPainter.height > maxHeight ||
-      textPainter.width > maxWidth);
+  return !(textPainter.didExceedMaxLines || textPainter.height > maxHeight || textPainter.width > maxWidth);
 }
 
 bool prepared = false;
@@ -47,9 +45,7 @@ Future prepareTests(WidgetTester tester) async {
 
   tester.binding.addTime(Duration(seconds: 10));
   prepared = true;
-  final fontData = File('test/assets/Roboto-Regular.ttf')
-      .readAsBytes()
-      .then((bytes) => ByteData.view(Uint8List.fromList(bytes).buffer));
+  final fontData = File('test/assets/Roboto-Regular.ttf').readAsBytes().then((bytes) => ByteData.view(Uint8List.fromList(bytes).buffer));
 
   final fontLoader = FontLoader('Roboto')..addFont(fontData);
   await fontLoader.load();
@@ -77,22 +73,38 @@ Future<Text> pumpAndGetText({
   return tester.widget<Text>(find.byType(Text));
 }
 
+Future<SelectableText> pumpAndGetSelectableText({
+  required WidgetTester tester,
+  required Widget widget,
+}) async {
+  await pump(tester: tester, widget: widget);
+  return tester.widget<SelectableText>(find.byType(SelectableText));
+}
+
 Future pumpAndExpectFontSize({
   required WidgetTester tester,
   required double expectedFontSize,
   required Widget widget,
+  bool selectable = false,
 }) async {
+  if (selectable) {
+    final text = await pumpAndGetSelectableText(tester: tester, widget: widget);
+    expect(selectableEffectiveFontSize(text), expectedFontSize);
+    return;
+  }
+
   final text = await pumpAndGetText(tester: tester, widget: widget);
   expect(effectiveFontSize(text), expectedFontSize);
 }
 
-RichText getRichText(WidgetTester tester) =>
-    tester.widget(find.byType(RichText));
+RichText getRichText(WidgetTester tester) => tester.widget(find.byType(RichText));
+
+EditableText getEditableText(WidgetTester tester) => tester.widget(find.byType(EditableText));
 
 class OverflowNotifier extends StatelessWidget {
   final VoidCallback overflowCallback;
 
-  OverflowNotifier(this.overflowCallback);
+  const OverflowNotifier(this.overflowCallback, {super.key});
 
   @override
   Widget build(BuildContext context) {

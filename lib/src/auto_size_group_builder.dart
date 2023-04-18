@@ -6,9 +6,10 @@ class AutoSizeGroupBuilder extends StatefulWidget {
       builder;
 
   /// Creates an [AutoSizeGroupBuilder] widget.
-  AutoSizeGroupBuilder({Key? key, required this.builder}) : super(key: key);
+  const AutoSizeGroupBuilder({Key? key, required this.builder}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _AutoSizeGroupBuilderState createState() => _AutoSizeGroupBuilderState();
 }
 

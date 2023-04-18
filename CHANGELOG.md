@@ -1,3 +1,6 @@
+## 3.0.1
+- Adds support for 'SelectableText'
+
 ## 3.0.0
 - Upgraded to null safety
 
