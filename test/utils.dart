@@ -43,7 +43,7 @@ Future prepareTests(WidgetTester tester) async {
     return;
   }
 
-  tester.binding.addTime(Duration(seconds: 10));
+  //tester.binding.addTime(const Duration(seconds: 10));
   prepared = true;
   final fontData = File('test/assets/Roboto-Regular.ttf').readAsBytes().then((bytes) => ByteData.view(Uint8List.fromList(bytes).buffer));
 

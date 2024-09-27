@@ -1,6 +1,6 @@
-# example
+# auto_size_text_plus_example
 
-A new Flutter project.
+Demonstrates how to use the auto_size_text_plus plugin.
 
 ## Getting Started
 

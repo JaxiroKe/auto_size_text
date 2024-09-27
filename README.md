@@ -1,4 +1,4 @@
-# AutoSizeText Plus*
+# Auto Size Text Plus*
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Oyonde/auto_size_text/CI) [![codecov](https://codecov.io/gh/Oyonde/auto_size_text/branch/master/graph/badge.svg)](https://codecov.io/gh/Oyonde/auto_size_text) [![Version](https://img.shields.io/pub/v/auto_size_text.svg)](https://pub.dev/packages/auto_size_text) ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)
 
@@ -9,7 +9,7 @@ Flutter widget that automatically resizes text to fit perfectly within its bound
 ### Resources:
 - [Documentation](https://pub.dev/documentation/auto_size_text_plus/latest/auto_size_text_plus/AutoSizeText-class.html)
 - [Pub Package](https://pub.dev/packages/auto_size_text_plus)
-- [GitHub Repository](https://github.com/Oyonde/auto_size_text)
+- [GitHub Repository](https://github.com/SiroDaves/auto_size_text_plus)
 
 
 ![](illustration/maxlines.gif)

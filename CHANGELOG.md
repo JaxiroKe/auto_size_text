@@ -1,3 +1,6 @@
+## 3.0.2
+- Updates homepage
+
 ## 3.0.1
 - Adds support for 'SelectableText'
 
